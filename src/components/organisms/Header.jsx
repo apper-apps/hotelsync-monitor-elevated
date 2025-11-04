@@ -1,13 +1,13 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import ApperIcon from "@/components/ApperIcon"
 import Button from "@/components/atoms/Button"
-import { AuthContext } from '../../App'
+import { useAuth } from '@/layouts/Root'
 
 const Header = ({ onMenuClick, occupiedRooms, totalRooms }) => {
   const [currentTime, setCurrentTime] = useState(new Date())
-  const { logout } = useContext(AuthContext)
+const { logout } = useAuth()
   const { user, isAuthenticated } = useSelector((state) => state.user)
 
   useEffect(() => {

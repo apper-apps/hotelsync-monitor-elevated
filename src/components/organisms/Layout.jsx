@@ -3,7 +3,9 @@ import Sidebar from "@/components/organisms/Sidebar"
 import Header from "@/components/organisms/Header"
 import { roomService } from "@/services/api/roomService"
 
-const Layout = ({ children }) => {
+import { Outlet } from "react-router-dom"
+
+const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [occupancyData, setOccupancyData] = useState({ occupied: 0, total: 0 })
 
@@ -41,9 +43,9 @@ loadOccupancyData()
       window.removeEventListener('housekeepingTaskCompleted', handleHousekeepingTaskCompleted)
     }
   }, [])
-  return (
+return (
     <div className="flex h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-<Sidebar 
+      <Sidebar 
         isOpen={sidebarOpen} 
         onClose={() => setSidebarOpen(false)} 
       />
@@ -56,7 +58,7 @@ loadOccupancyData()
         />
         
         <main className="flex-1 overflow-auto p-6">
-          {children}
+          <Outlet />
         </main>
       </div>
     </div>
