@@ -19,13 +19,13 @@
 
 .Toastify__toast--error {
   @apply border-l-red-500 bg-white text-gray-800;
-}
-
-.Toastify__toast--info {
+.Toastify__toast--error {
   @apply border-l-red-500 bg-white text-gray-800;
 }
 
-.Toastify__toast--warning {
+.Toastify__toast--info {
+  @apply border-l-primary-500 bg-white text-gray-800;
+}
   @apply border-l-amber-500 bg-white text-gray-800;
 }
 
