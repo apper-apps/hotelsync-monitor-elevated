@@ -13,7 +13,6 @@
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 14px;
 }
-
 .Toastify__toast--success {
   @apply border-l-green-500 bg-white text-gray-800;
 }
@@ -23,7 +22,7 @@
 }
 
 .Toastify__toast--info {
-  @apply border-l-blue-500 bg-white text-gray-800;
+  @apply border-l-red-500 bg-white text-gray-800;
 }
 
 .Toastify__toast--warning {
