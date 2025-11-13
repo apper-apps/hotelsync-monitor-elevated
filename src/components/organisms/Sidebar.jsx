@@ -4,13 +4,14 @@ import ApperIcon from "@/components/ApperIcon"
 const Sidebar = ({ isOpen, onClose }) => {
   const location = useLocation()
   
-  const navigation = [
+const navigation = [
     { name: "Dashboard", href: "/", icon: "LayoutDashboard" },
     { name: "Rooms", href: "/rooms", icon: "Bed" },
     { name: "Reservations", href: "/reservations", icon: "Calendar" },
     { name: "Guests", href: "/guests", icon: "Users" },
     { name: "Housekeeping", href: "/housekeeping", icon: "Sparkles" },
-    { name: "Reports", href: "/reports", icon: "BarChart3" }
+    { name: "Reports", href: "/reports", icon: "BarChart3" },
+    { name: "Contact Us", href: "/contact", icon: "Mail" }
   ]
 
   const SidebarContent = () => (

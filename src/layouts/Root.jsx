@@ -121,7 +121,7 @@ export default function Root() {
       navigate(redirectPath)
     } else {
       // Navigate to home only if on auth pages
-      const authPages = ["/login", "/signup", "/callback"]
+const authPages = ["/login", "/signup", "/callback"]
       const isOnAuthPage = authPages.some(page =>
         window.location.pathname.includes(page)
       )

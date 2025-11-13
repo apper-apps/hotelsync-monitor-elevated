@@ -17,6 +17,7 @@ const ErrorPage = lazy(() => import("@/components/pages/ErrorPage"))
 const ResetPassword = lazy(() => import("@/components/pages/ResetPassword"))
 const PromptPassword = lazy(() => import("@/components/pages/PromptPassword"))
 const NotFound = lazy(() => import("@/components/pages/NotFound"))
+const ContactUs = lazy(() => import("@/components/pages/ContactUs"))
 const MainLayout = lazy(() => import("@/components/organisms/Layout"))
 
 // Helper function to create routes with consistent patterns
@@ -91,6 +92,12 @@ export const router = createBrowserRouter([
       createRoute({
         path: "reset-password/:appId/:fields",
         element: <ResetPassword />,
+      }),
+// Contact Us page
+      createRoute({
+        path: 'contact',
+        element: <ContactUs />,
+        title: 'Contact Us'
       }),
       
       // Main application routes (protected)

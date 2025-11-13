@@ -147,6 +147,20 @@
           }
         ]
       }
+}
+  },
+  "/contact": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "User must be logged in to access contact form",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login",
+      "excludeRedirectQuery": false
     }
   }
 }
